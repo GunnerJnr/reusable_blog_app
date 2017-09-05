@@ -9,7 +9,7 @@ from .forms import BlogPostForm
 
 # Create your views here.
 def redirect_root(request):
-    return redirect('/reusable_blog/')
+    return redirect('/blog/')
 
 
 def post_list(request):
