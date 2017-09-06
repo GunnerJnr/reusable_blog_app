@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
-from django.shortcuts import redirect
 from .forms import BlogPostForm
 
 
@@ -58,7 +57,7 @@ def new_post(request):
             post.published_date = timezone.now()
             post.save()
             # return redirect(post_detail, post.pk)
-            return redirect('blog/post-detail', post.slug)
+            return redirect('post-detail', post.slug)
     else:
         form = BlogPostForm()
     return render(request, 'blog/blogpostform.html', {'form': form})
@@ -73,7 +72,7 @@ def edit_post(request, slug):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('blog/post-detail', post.slug)
+            return redirect('post-detail', post.slug)
     else:
         form = BlogPostForm(instance=post)
     return render(request, 'blog/blogpostform.html', {'form': form})
