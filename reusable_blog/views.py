@@ -8,10 +8,6 @@ from .forms import BlogPostForm
 
 
 # Create your views here.
-def redirect_root(request):
-    return redirect('/blog/')
-
-
 def post_list(request):
     """
     Create a view that will return a list of
