@@ -29,6 +29,7 @@ class Migration(migrations.Migration):
                 ('views', models.IntegerField(default=0)),
                 ('tag', models.CharField(blank=True, max_length=30, null=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('images', models.ImageField(blank=True, null=True, upload_to='img'),
             ],
         ),
     ]
