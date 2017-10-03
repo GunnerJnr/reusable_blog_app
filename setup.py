@@ -9,13 +9,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
  
 setup(
     name='reusable-blog-app',
-    version='1.0.0',
+    version='1.0.1',
     packages=['reusable_blog'],
     include_package_data=True,
     license='BSD License',  # example license
     description='A simple Django app to create blogs',
     long_description=README,
-    url='https://github.com/GunnerJnr',
+    url='https://github.com/GunnerJnr/reusable_blog_app',
     author='David Gunner (Jnr)',
     author_email='gunnerjnr@live.co.uk',
     classifiers=[
