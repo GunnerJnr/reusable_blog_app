@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
@@ -13,7 +14,7 @@ class Post(models.Model):
 
     # author is linked to a registered user
     # via the User model in the auth app.
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.CharField(max_length=200)
     content = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
