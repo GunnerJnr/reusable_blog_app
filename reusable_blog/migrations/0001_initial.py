@@ -32,4 +32,9 @@ class Migration(migrations.Migration):
                 ('images', models.ImageField(blank=True, null=True, upload_to='img')),
             ],
         ),
+    migrations.AddField(
++            model_name='post',
++            name='images',
++            field=models.ImageField(blank=True, null=True, upload_to='img'),
++        ),
     ]
