@@ -1,7 +1,6 @@
 # coding=utf-8
 from django.conf.urls import url
 import views
-from .views import redirect_root
 
 urlpatterns = [
     url(r"^$", views.post_list, name="post_list"),
